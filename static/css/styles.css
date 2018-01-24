@@ -1,0 +1,13 @@
+@import url('./nav.css');
+
+html, body {
+  background-color: #ffd27e;
+}
+
+main.container {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 3em auto 0;
+  padding: 1em;
+  background-color: #fff;
+}

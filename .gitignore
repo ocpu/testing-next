@@ -1,0 +1,7 @@
+*/
+*.*
+!components/*
+!.git*
+!package*.json
+!static/**/*.css
+!pages/*.js
