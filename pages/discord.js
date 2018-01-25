@@ -1,6 +1,10 @@
 import { connect } from 'react-redux'
 
+import discord from 'discord.js'
+
 import Page from "../components/page"
+
+discord.OAuth2Application()
 
 export default Page(connect(
   state => ({ // state -> props

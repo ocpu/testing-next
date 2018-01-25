@@ -1,7 +1,2 @@
-*/
-*.*
-!components/*
-!.git*
-!package*.json
-!static/**/*.css
-!pages/*.js
+.next/
+node_modules/
