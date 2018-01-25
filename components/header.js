@@ -9,8 +9,8 @@ const routes = [
 
 export default class Header extends React.Component {
 
-  toggleMobileBtn(e) {
-
+  hideNav(e) {
+    console.log(e)
   }
 
   render() {
@@ -36,13 +36,19 @@ export default class Header extends React.Component {
             )}
           </ul>
         </nav>
-        <nav id="nav-pane">
-          <ul>
-            {routes.map(([path, text], i) =>
-              <li key={i}><NavLink href={path}>{text}</NavLink></li>
-            )}
-          </ul>
-        </nav>
+        <aside className="nav-pane show" onClick={this.hideNav}>
+          <nav id="pane">
+            <button className="hide-btn" onClick={()=>console.log('hello')}>&times;</button>
+            <header>
+              {/* <img src="whatever.jpg" alt="some image" onError={(e)=>e.target.styles.display='none'}/> */}
+            </header>
+            <ul>
+              {routes.map(([path, text], i) =>
+                <li key={i}><NavLink href={path}>{text}</NavLink></li>
+              )}
+            </ul>
+          </nav>
+        </aside>
       </div>
     )
   }

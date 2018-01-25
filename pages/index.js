@@ -9,9 +9,9 @@ export default Page(connect(
   dispatch => ({ // dispatch -> props
 
   })
-)(({/* props */ color }) => (
+)(({ color }) => (
   <main className="container">
     <h1>Home</h1>
-    <p>I am not a robot!</p>
+    
   </main>
 )))

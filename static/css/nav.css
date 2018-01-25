@@ -1,3 +1,7 @@
+/*
+ * TOP NAVIGATION
+ */
+
 #top-nav {
   display: flex;
   flex-flow: row nowrap;
@@ -23,16 +27,8 @@
 }
 
 #top-nav li {
-  height: 100%;/*
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color .3s ease;*/
+  height: 100%;
 }
-/*
-#top-nav li:hover {
-  background-color: rgba(0, 0, 0, .2);
-}*/
 
 #top-nav li a {
   padding: .5em;
@@ -46,11 +42,127 @@
   transition: background-color .3s ease;
 }
 
-#top-nav a:hover {
+#top-nav a:hover, #top-nav a:focus {
   color: #ccc;
   background-color: rgba(0, 0, 0, .2);
+  outline: none;
 }
 
 @media screen and (max-width: 700px) {
-  
+  #top-nav {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #top-nav {
+    font-size: .9em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #top-nav {
+    font-size: .7em;
+  }
+}
+
+/*
+ * NAVIGATION PANE
+ */
+
+#pane {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 90vw;
+  max-width: 270px;
+  height: 100%;
+  background-color: #2464b9;
+  transform: translateX(-100%);
+  transition: transform .3s cubic-bezier(0, 0, .3, 1);
+  will-change: transform;
+}
+
+.nav-pane::before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, .4);
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity .3s cubic-bezier(0, 0, .3, 1);
+}
+
+.nav-pane.show::before {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.nav-pane.show #pane {
+  transform: translateX(0);
+  pointer-events: all;
+}
+
+.nav-pane #pane .hide-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  font-size: 2em;
+  width: 1em;
+  height: 1em;
+  background: none;
+  border: none;
+  color: #eee;
+  transform: translate(-.1em, -.2em);
+}
+
+#pane header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10em;
+  background: linear-gradient(to bottom right, purple, darkblue, darkblue) #333;
+}
+
+#pane header img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+
+#pane > ul {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+}
+
+#pane li {
+  width: 100%;
+}
+
+#pane li a {
+  padding: .5em 2em;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  color: #eee;
+  font-weight: 300;
+  transition: background-color .3s ease;
+}
+
+#pane a:hover,
+#pane a:focus {
+  color: #ccc;
+  background-color: rgba(0, 0, 0, .2);
+  outline: none;
 }
