@@ -1,24 +1,21 @@
 {
   "name": "testing-next",
   "version": "1.0.0",
-  "description": "",
+  "description": "A test in how to use Next.js, React and Redux",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next"
   },
   "keywords": [],
-  "author": "",
+  "author": "Martin Hövre <martin.hovre@opencubes.io>",
   "license": "MIT",
   "dependencies": {
     "discord.js": "^11.3.0",
-    "isomorphic-style-loader": "^4.0.0",
     "next": "^4.2.3",
-    "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "sass-loader": "^6.0.6"
+    "redux": "^3.7.2"
   }
 }
